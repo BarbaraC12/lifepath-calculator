@@ -9,14 +9,17 @@
 
 from p_chemindevie import calcul_chemin_vie
 
+def somme_chiffres(nombre):
+    while nombre >= 10:
+        nombre = sum(int(chiffre) for chiffre in str(nombre))
+    return nombre
+
+
 prenoms = input("Entrez vos prenoms au format 'prenom1 prenom2 ...' : ")
-# Demander à l'utilisateur d'entrer sa date de naissance
-date_naissance = input("Entrez votre date de naissance au format 'JJMMAAAA' : ")
+date_naissance = input("Entrez votre date de naissance au format 'JJ/MM/AAAA' : ")
 nomp = input("Entrez le nom du pere au format 'nom' : ")
 nomm = input("Entrez le nom de la mere au format 'nom' : ")
 
 # Calculer le chemin de vie
-chiffre_vie = calcul_chemin_vie(date_naissance)
-
-# Afficher le résultat
+chiffre_vie = somme_chiffres(calcul_chemin_vie(date_naissance))
 print("Votre chiffre chemin de vie est :", chiffre_vie)
