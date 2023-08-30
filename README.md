@@ -7,12 +7,10 @@ Calculateur pour confectionner des bracelets de chemin de vie sur mesure
 |A	|B	|C	|D	|E	|F	|G	|H	|I  |
 |J	|K	|L	|M	|N	|O	|P	|Q	|R  |
 |S	|T	|U	|V	|W	|X	|Y	|Z	|   |
-|É/È|Ö	|Ù	|	|Î	|Ô/Ó|	|Ü	|À/Â/Á|
-|Ê/Ç|	|Û	|	|Ë	|Ä	|	|	|Ï  |
 
 ## Information necessaire  
 
-Prenom(s), Date de naissance(dd/mm/aaaa),Nom du pere, Nom de la mere
+Prenom(s), Date de naissance(dd/mm/aaaa),Nom du pere, Nom de la mere le tout sans les accents
 
 ## Calculs de pierre
 - **Pierre de base**: Calculez la somme des premières lettres des   -  noms et prénoms.
