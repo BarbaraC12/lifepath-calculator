@@ -58,6 +58,5 @@ def split_date(date_str):
         if match:
             day, month, year = match.groups()
             year = year_to_four_digit(year)
-            print(day, month, year)
             return int(day), int(month), int(year)
     return None, None, None
