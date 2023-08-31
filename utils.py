@@ -1,3 +1,6 @@
+import re
+from datetime import datetime
+
 def tableau_de_vie_to_chiffre(lettre):
     tableau_de_vie = {
         'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5,
@@ -33,3 +36,28 @@ def somme_chiffres(nombre):
         nombre = sum(int(chiffre) for chiffre in str(nombre))
     return nombre
 
+def year_to_four_digit(year):
+    if len(year) == 2:
+        current_year = datetime.now().year
+        if year <= str(current_year)[2:]:
+            prefix = str(current_year)[:2]
+        else:
+            prefix = "19"
+        year = f"{prefix}{year}"
+    return year
+
+def split_date(date_str):
+    date_formats = [
+        r'(\d{2})[./\s](\d{2})[./\s](\d{4})',  # DD/MM/YYYY, DD.MM.YYYY, DD MM YYYY
+        r'(\d{2})(\d{2})(\d{4})',              # DDMMYYYY
+        r'(\d{2})[./\s](\d{2})[./\s](\d{2})',  # DD/MM/YY, DD.MM.YY, DD MM YY
+        r'(\d{2})(\d{2})(\d{2})',              # DDMMYY
+    ]
+    for regex in date_formats:
+        match = re.match(regex, date_str)
+        if match:
+            day, month, year = match.groups()
+            year = year_to_four_digit(year)
+            print(day, month, year)
+            return int(day), int(month), int(year)
+    return None, None, None

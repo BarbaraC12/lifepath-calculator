@@ -51,7 +51,7 @@ def calcul_sommet(liste):
 # 14 + 9 + 1963 = 1986 = 1 + 9 + 8 + 6 = 24
 
 def calcul_chemin_vie(date_naissance):
-    jour, mois, annee = map(int, date_naissance.split('.'))
+    jour, mois, annee = u.split_date(date_naissance)
     somme_date = jour + mois + annee
     return somme_date
 
@@ -169,11 +169,11 @@ chiffre_touche = calcul_touche(chiffre_base, chiffre_sommet, chiffre_appel, chif
 chiffre_voeux = calcul_voeux(identity)
 print("Vos equivalence de pierre :")
 
-print("\t- Pierre de basee est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_base)))
-print("\t- Pierre de sommet est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_sommet)))
-print("\t- Pierre de chemin de vie est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_vie)))
-print("\t- Pierre d'appel est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_appel)))
-print("\t- Pierre de personnalite est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_personnalite)))
-print("\t- Pierre d'expression est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_expression)))
-print("\t- Pierre de touche est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_touche)))
-print("\t- Pierre de voeux est :", u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_voeux)))
+print(f"\t- Pierre de basee est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_base))}")
+print(f"\t- Pierre de sommet est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_sommet))}")
+print(f"\t- Pierre de chemin de vie est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_vie))}")
+print(f"\t- Pierre d'appel est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_appel))}")
+print(f"\t- Pierre de personnalite est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_personnalite))}")
+print(f"\t- Pierre d'expression est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_expression))}")
+print(f"\t- Pierre de touche est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_touche))}")
+print(f"\t- Pierre de voeux est : {u.tableau_chiffre_to_pierre(u.somme_chiffres(chiffre_voeux))}")
