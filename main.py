@@ -1,4 +1,3 @@
-import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -59,7 +58,7 @@ class MyGridLayout(GridLayout):
         # Print value to the screen
         self.add_widget(
             Label(
-                text=f'Welcome {name} {nameF, nameM}, you are born the {bd}!'))
+                text=f'Welcome {name} {nameF} {nameM}, you are born the {bd}!'))
 
 
 class MyApp(App):
